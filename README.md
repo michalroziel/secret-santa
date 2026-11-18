@@ -10,7 +10,7 @@ No sign-ups and no server. Nothing is stored online.
    - **Keep apart** (optional): pairs who shouldn't draw each other, like couples.
    - **Details** (optional): budget, when & where, and a short note. Everyone sees these.
 2. Click **Draw names**. The draw happens in the browser. Nobody gets themselves, and the keep-apart rules are always respected. The organizer never sees who got whom.
-3. Each person gets a **Copy** button (and **Share** on phones) with a ready-to-send message containing their personal link.
+3. Each person gets a **Copy link** button for their personal link, ready to paste into a chat or a browser. On phones there's also a **Share** button that sends it with a short message.
 4. Each friend opens their link, taps the gift, and sees their match. 🎁
 
 The organizer page remembers the drawn links in that browser, so you can come back later to finish sending them.
