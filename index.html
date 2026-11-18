@@ -483,7 +483,7 @@
     <section id="results" hidden>
       <div class="card">
         <h2>🎉 Names drawn!</h2>
-        <p class="hint">Send each person <strong>their own</strong> link. <strong>Copy</strong> gives you a ready-to-send message. Don't open other people's links, because they show who that person got. Your own link is in the list too.</p>
+        <p class="hint">Send each person <strong>their own</strong> link. Don't open other people's links, because they show who that person got. Your own link is in the list too.</p>
         <ul class="links" id="links"></ul>
         <p class="progress" id="progress"></p>
       </div>
@@ -953,15 +953,15 @@
         }
         tick.addEventListener('click', function () { markSent(!entry.sent); });
 
-        var copy = el('button', 'btn small', 'Copy');
+        var copy = el('button', 'btn small', 'Copy link');
         copy.type = 'button';
-        copy.setAttribute('aria-label', 'Copy message with ' + entry.name + "'s link");
+        copy.setAttribute('aria-label', "Copy " + entry.name + "'s link");
         copy.addEventListener('click', function () {
-          var message = inviteText(entry.name) + '\n' + linkFor(entry);
-          copyText(message).then(function (ok) {
-            if (!ok) { window.prompt('Copy this message and send it to ' + entry.name + ':', message); }
+          var url = linkFor(entry);
+          copyText(url).then(function (ok) {
+            if (!ok) { window.prompt('Copy this link and send it to ' + entry.name + ':', url); }
             copy.textContent = 'Copied!';
-            setTimeout(function () { copy.textContent = 'Copy'; }, 1600);
+            setTimeout(function () { copy.textContent = 'Copy link'; }, 1600);
             markSent(true);
           });
         });
